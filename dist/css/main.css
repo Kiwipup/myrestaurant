@@ -8620,7 +8620,11 @@ h3 {
 
 .jumboheader {
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+  background-color: rgba(160, 82, 45, 0.7);
 }
 
 /*# sourceMappingURL=main.css.map */
