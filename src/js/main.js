@@ -1,6 +1,15 @@
 // Create a request variable and assign a new XMLHttpRequest object to it.
 let request = new XMLHttpRequest();
 
+
+document.onreadystatechange = function () {
+  if (document.readyState == "interactive") {
+      loadMenuApi;
+  }
+};
+
+
+loadMenuApi(){
 // Open a new connection, using the GET request on the URL endpoint
 request.open('GET', 'https://entree-f18.herokuapp.com/v1/menu/12', true);
 
@@ -36,3 +45,4 @@ if (request.status >= 200 && request.status < 400) {
 }
 
   request.send();
+}
