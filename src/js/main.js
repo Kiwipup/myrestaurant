@@ -4,12 +4,12 @@ let request = new XMLHttpRequest();
 
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
-      loadMenuApi;
+      loadMenuApi();
   }
 };
 
 
-loadMenuApi(){
+function loadMenuApi(){
 // Open a new connection, using the GET request on the URL endpoint
 request.open('GET', 'https://entree-f18.herokuapp.com/v1/menu/12', true);
 
@@ -40,7 +40,7 @@ if (request.status >= 200 && request.status < 400) {
 } else {
   console.log('error');
 }
-  // Begin accessing JSON data here
+
 
 }
 
